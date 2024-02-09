@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar and Clock</title>
+    <style>
+        body {
+            background-color: #97b05b;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0a0a0a;
+            margin-top: 50px;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .clock {
+            font-size: 64px;
+            text-align: center;
+            color: #aeccee; 
+            background-color: #120606; 
+            padding: 20px;
+            border-radius: 60px;
+            box-shadow: 0 0 10px rgba(27, 71, 228, 0.1);
+            width: 400px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .Calendar {
+            font-size: 30px;
+            text-align: center;
+            color: #aeccee; 
+            background-color: #120606; 
+            padding: 30px;
+            border-radius: 60px;
+            box-shadow: 0 0 10px rgba(27, 71, 228, 0.1);
+            width: 400px;
+            margin: 0 auto;
+            margin-top: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Calendar and Clock</h1>
+    
+    <div class="clock" id="clock">
+        {{date}} <br>
+        {{time}} <br>
+        
+    </div>
+    <br>
+    <br>
+    <div class="Calendar" id="Calendar">
+        {{ cal|safe }}
+        <form id="Calendar" method="get">
+            <!-- <label for="month">Enter month number:</label> -->
+            <input type="text" id="month" name="month" placeholder="month number eg: 01,02..">
+            <!-- <label for="year">Enter year number:</label> -->
+            <input type="text" id="year" name="year" placeholder="year number"><br>
+            <button type="submit">Check Calendar</button>
+        </form>
+    </div>
+    
+
+
+
+
+
+</body>
+</html>
